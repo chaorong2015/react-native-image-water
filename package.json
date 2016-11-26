@@ -1,11 +1,20 @@
 {
-  "name": "RNImageWatermark",
+  "name": "react-native-image-water",
   "version": "1.0.0",
-  "description": "",
+  "description": "iOS 设置九宫格位置的水印",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chaorong2015/react-native-image-water.git"
+  },
+  "keywords": [
+    "imageWaterMask"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "chaorong@maichong.it",
+  "license": "ISC",
+  "dependencies": {
+  }
 }
