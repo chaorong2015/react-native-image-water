@@ -150,7 +150,7 @@ RCT_EXPORT_METHOD(addImageWatermark:(NSString *)path
 //        NSLog(@"字符串中含有非法字符:%d", otherLength);
 //        NSLog(@"totle is :%d",[textStr length]);
 //        NSLog(@"col is :%d",strLength);
-        int fontSize = 400;
+        int fontSize = 200;
         if(fontSize * strLength > 2 * x){
             fontSize = (2 * x ) / strLength;
         }
@@ -158,48 +158,104 @@ RCT_EXPORT_METHOD(addImageWatermark:(NSString *)path
         int pointX = 0;
         int pointY = 0;
         int number = watermarkPosition;
-        switch (number) {
-         /*＝＝＝＝＝＝九宫格第一竖排＝＝＝＝＝＝*/
-            case 1:
-                pointX = 20;
-                pointY = y / 2 + top;
-                break;
-            case 4:
-                pointX = 20;
-                pointY = y * 1 + top;
-                break;
-            case 7:
-                pointX = 20;
-                pointY = y * 2 - top / strLength - 20;
-                break;
-        /*＝＝＝＝＝＝九宫格第二竖排＝＝＝＝＝＝*/
-            case 2:
-                pointX = x / 2 + x - (fontSize * strLength) / 2;
-                pointY = y / 2 + top;
-                break;
-            case 5:
-                pointX = x / 2 + x - (fontSize * strLength) / 2;
-                pointY = y * 1 + top;
-                break;
-            case 8:
-                pointX = x / 2 + x - (fontSize * strLength) / 2;
-                pointY = y * 2 - top / strLength - 20;
-                break;
-           /*＝＝＝＝＝＝九宫格第三竖排＝＝＝＝＝＝*/
-            case 3:
-                pointX = x * 3 - fontSize * strLength - 20;
-                pointY = y / 2 + top;
-                break;
-            case 6:
-                pointX = x * 3 - fontSize * strLength - 20;
-                pointY = y * 1 + top / strLength;
-                break;
-            case 9:
-                pointX = x * 3 - fontSize * strLength - 20;
-                pointY = y * 2 - top / strLength - 20;
-                break;
-            default:
-                break;
+        if(strLength){
+            if(fontSize * strLength > 2 * x){
+                //以宽设置字体属性
+                fontSize = (2 * x ) / strLength;
+                top = (y - fontSize) / 2;
+                //NSLog(@"以宽设置字体 is :%d",fontSize);
+                switch (number) {
+                        /*＝＝＝＝＝＝九宫格第一竖排＝＝＝＝＝＝*/
+                    case 1:
+                        pointX = 20;
+                        pointY = y / 2 + top;
+                        break;
+                    case 4:
+                        pointX = 20;
+                        pointY = y * 1 + top;
+                        break;
+                    case 7:
+                        pointX = 20;
+                        pointY = y * 2 - top / strLength - 20;
+                        break;
+                        /*＝＝＝＝＝＝九宫格第二竖排＝＝＝＝＝＝*/
+                    case 2:
+                        pointX = x / 2 + x - (fontSize * strLength) / 2;
+                        pointY = y / 2 + top;
+                        break;
+                    case 5:
+                        pointX = x / 2 + x - (fontSize * strLength) / 2;
+                        pointY = y * 1 + top;
+                        break;
+                    case 8:
+                        pointX = x / 2 + x - (fontSize * strLength) / 2;
+                        pointY = y * 2 - top / strLength - 20;
+                        break;
+                        /*＝＝＝＝＝＝九宫格第三竖排＝＝＝＝＝＝*/
+                    case 3:
+                        pointX = x * 3 - fontSize * strLength - 120;
+                        pointY = y / 2 + top;
+                        break;
+                    case 6:
+                        pointX = x * 3 - fontSize * strLength - 120;
+                        pointY = y * 1 + top / strLength;
+                        break;
+                    case 9:
+                        pointX = x * 3 - fontSize * strLength - 120;
+                        pointY = y * 2 - top / strLength - 20;
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                //默认字体
+                //NSLog(@"默认字体 is :%d",fontSize);
+                top = (y - fontSize) / 2;
+                switch (number) {
+                        /*＝＝＝＝＝＝九宫格第一竖排＝＝＝＝＝＝*/
+                    case 1:
+                        pointX = 20;
+                        pointY = y / 2 + top;
+                        break;
+                    case 4:
+                        pointX = 20;
+                        pointY = y * 1 + top;
+                        break;
+                    case 7:
+                        pointX = 20;
+                        pointY = y * 2;
+                        break;
+                        /*＝＝＝＝＝＝九宫格第二竖排＝＝＝＝＝＝*/
+                    case 2:
+                        pointX = x / 2 + x - (fontSize * strLength) / 2;
+                        pointY = y / 2 + top;
+                        break;
+                    case 5:
+                        pointX = x / 2 + x - (fontSize * strLength) / 2;
+                        pointY = y * 1 + top;
+                        break;
+                    case 8:
+                        pointX = x / 2 + x - (fontSize * strLength) / 2;
+                        pointY = y * 2;
+                        break;
+                        /*＝＝＝＝＝＝九宫格第三竖排＝＝＝＝＝＝*/
+                    case 3:
+                        pointX = x * 3 - fontSize * strLength - 120;
+                        pointY = y / 2 + top;
+                        break;
+                    case 6:
+                        pointX = x * 3 - fontSize * strLength - 120;
+                        pointY = y * 1 + top;
+                        break;
+                    case 9:
+                        pointX = x * 3 - fontSize * strLength - 120;
+                        pointY = y * 2;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
         }
 //        NSLog(@"textStr is :%@",textStr);
 //        NSLog(@"number is :%d",number);
