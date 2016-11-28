@@ -1,7 +1,7 @@
 {
   "name": "react-native-image-water",
-  "version": "1.0.0",
-  "description": "iOS 设置九宫格位置的水印",
+  "version": "1.0.1",
+  "description": "iOS 设置九宫格位置的水印,初始图片大小,保存图片到新建相册",
   "main": "index.js",
   "repository": {
     "type": "git",

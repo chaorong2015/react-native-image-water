@@ -26,6 +26,16 @@ module.exports.ImageWatermark = {
       });
     });
   },
+	addPhotoAlbum: (path, str='') => {
+		return new Promise((resolve, reject) => {
+			NativeModules.RNImageWatermark.addPhotoAlbum(path, str, (err, msg) => {
+				if (err) {
+					return reject(err);
+				}
+				resolve(msg);
+			});
+		});
+	},
   testPrint: () => {
   	console.log('RNImageWatermark=testPrint=', RNImageWatermark);
     return new Promise((resolve, reject) => {
