@@ -93,10 +93,11 @@ RCT_EXPORT_METHOD(testPrint:(NSString *)text
     callback(@[[NSNull null], testStr]);
 }
 
-//给图片添加水印
+//给图片添加字体水印
 RCT_EXPORT_METHOD(addImageWatermark:(NSString *)path
                   watermarkText:(NSString *)watermarkText
                   watermarkPosition:(int)watermarkPosition
+                  watermarkSize:(NSInteger)watermarkSize
                   outputPath:(NSString *)outputPath
                   callback:(RCTResponseSenderBlock)callback)
 {
@@ -151,6 +152,9 @@ RCT_EXPORT_METHOD(addImageWatermark:(NSString *)path
 //        NSLog(@"totle is :%d",[textStr length]);
 //        NSLog(@"col is :%d",strLength);
         int fontSize = 200;
+        if(watermarkSize){
+            fontSize = watermarkSize;
+        }
         if(fontSize * strLength > 2 * x){
             fontSize = (2 * x ) / strLength;
         }
@@ -159,113 +163,60 @@ RCT_EXPORT_METHOD(addImageWatermark:(NSString *)path
         int pointY = 0;
         int number = watermarkPosition;
         if(strLength){
-            if(fontSize * strLength > 2 * x){
-                //以宽设置字体属性
-                fontSize = (2 * x ) / strLength;
-                top = (y - fontSize) / 2;
-                //NSLog(@"以宽设置字体 is :%d",fontSize);
-                switch (number) {
-                        /*＝＝＝＝＝＝九宫格第一竖排＝＝＝＝＝＝*/
-                    case 1:
-                        pointX = 20;
-                        pointY = y / 2 + top;
-                        break;
-                    case 4:
-                        pointX = 20;
-                        pointY = y * 1 + top;
-                        break;
-                    case 7:
-                        pointX = 20;
-                        pointY = y * 2 - top / strLength - 20;
-                        break;
-                        /*＝＝＝＝＝＝九宫格第二竖排＝＝＝＝＝＝*/
-                    case 2:
-                        pointX = x / 2 + x - (fontSize * strLength) / 2;
-                        pointY = y / 2 + top;
-                        break;
-                    case 5:
-                        pointX = x / 2 + x - (fontSize * strLength) / 2;
-                        pointY = y * 1 + top;
-                        break;
-                    case 8:
-                        pointX = x / 2 + x - (fontSize * strLength) / 2;
-                        pointY = y * 2 - top / strLength - 20;
-                        break;
-                        /*＝＝＝＝＝＝九宫格第三竖排＝＝＝＝＝＝*/
-                    case 3:
-                        pointX = x * 3 - fontSize * strLength - 120;
-                        pointY = y / 2 + top;
-                        break;
-                    case 6:
-                        pointX = x * 3 - fontSize * strLength - 120;
-                        pointY = y * 1 + top / strLength;
-                        break;
-                    case 9:
-                        pointX = x * 3 - fontSize * strLength - 120;
-                        pointY = y * 2 - top / strLength - 20;
-                        break;
-                    default:
-                        break;
-                }
-            } else {
-                //默认字体
-                //NSLog(@"默认字体 is :%d",fontSize);
-                top = (y - fontSize) / 2;
-                switch (number) {
-                        /*＝＝＝＝＝＝九宫格第一竖排＝＝＝＝＝＝*/
-                    case 1:
-                        pointX = 20;
-                        pointY = y / 2 + top;
-                        break;
-                    case 4:
-                        pointX = 20;
-                        pointY = y * 1 + top;
-                        break;
-                    case 7:
-                        pointX = 20;
-                        pointY = y * 2;
-                        break;
-                        /*＝＝＝＝＝＝九宫格第二竖排＝＝＝＝＝＝*/
-                    case 2:
-                        pointX = x / 2 + x - (fontSize * strLength) / 2;
-                        pointY = y / 2 + top;
-                        break;
-                    case 5:
-                        pointX = x / 2 + x - (fontSize * strLength) / 2;
-                        pointY = y * 1 + top;
-                        break;
-                    case 8:
-                        pointX = x / 2 + x - (fontSize * strLength) / 2;
-                        pointY = y * 2;
-                        break;
-                        /*＝＝＝＝＝＝九宫格第三竖排＝＝＝＝＝＝*/
-                    case 3:
-                        pointX = x * 3 - fontSize * strLength - 120;
-                        pointY = y / 2 + top;
-                        break;
-                    case 6:
-                        pointX = x * 3 - fontSize * strLength - 120;
-                        pointY = y * 1 + top;
-                        break;
-                    case 9:
-                        pointX = x * 3 - fontSize * strLength - 120;
-                        pointY = y * 2;
-                        break;
-                    default:
-                        break;
-                }
-            }
             
+            switch (number) {
+                    /*＝＝＝＝＝＝九宫格第一竖排＝＝＝＝＝＝*/
+                case 1:
+                    pointX = 20;
+                    pointY = 20;
+                    break;
+                case 4:
+                    pointX = 20;
+                    pointY = y * 1 + top;
+                    break;
+                case 7:
+                    pointX = 20;
+                    pointY = y * 3 - fontSize - 20;
+                    break;
+                    /*＝＝＝＝＝＝九宫格第二竖排＝＝＝＝＝＝*/
+                case 2:
+                    pointX = x / 2 + x - (fontSize * strLength) / 2;
+                    pointY = 20;
+                    break;
+                case 5:
+                    pointX = x / 2 + x - (fontSize * strLength) / 2;
+                    pointY = y * 1 + top;
+                    break;
+                case 8:
+                    pointX = x / 2 + x - (fontSize * strLength) / 2;
+                    pointY = y * 3 - fontSize - 20;
+                    break;
+                    /*＝＝＝＝＝＝九宫格第三竖排＝＝＝＝＝＝*/
+                case 3:
+                    pointX = x * 3 - fontSize * strLength - 20;
+                    pointY = 20;
+                    break;
+                case 6:
+                    pointX = x * 3 - fontSize * strLength - 20;
+                    pointY = y * 1 + top;
+                    break;
+                case 9:
+                    pointX = x * 3 - fontSize * strLength - 20;
+                    pointY = y * 3 - fontSize - 20;
+                    break;
+                default:
+                    break;
+            }
         }
-//        NSLog(@"textStr is :%@",textStr);
-//        NSLog(@"number is :%d",number);
-//        NSLog(@"x is :%d",x);
-//        NSLog(@"y is :%d",y);
-//        NSLog(@"top is :%d",top);
-//        NSLog(@"pointX is :%d",pointX);
-//        NSLog(@"pointY is :%d",pointY);
-//        NSLog(@"fontSize is :%d",fontSize);
-        UIImage *waterMarkImage = [baseImage imageWaterMarkWithString:textStr point:CGPointMake(pointX, pointY) attribute:@{NSFontAttributeName:[UIFont fontWithName:@"AmericanTypewriter" size:fontSize],NSForegroundColorAttributeName:[UIColor purpleColor]} image:nil imagePoint:CGPointMake(0, 0) alpha:0.2];
+        NSLog(@"textStr is :%@",textStr);
+        NSLog(@"number is :%d",number);
+        NSLog(@"x is :%d",x);
+        NSLog(@"y is :%d",y);
+        NSLog(@"top is :%d",top);
+        NSLog(@"pointX is :%d",pointX);
+        NSLog(@"pointY is :%d",pointY);
+        NSLog(@"fontSize is :%d",fontSize);
+        UIImage *waterMarkImage = [baseImage imageWaterMarkWithString:textStr point:CGPointMake(pointX, pointY) attribute:@{NSFontAttributeName:[UIFont fontWithName:@"AmericanTypewriter" size:fontSize],NSForegroundColorAttributeName:[UIColor whiteColor]} image:nil imagePoint:CGPointMake(0, 0) alpha:0.2];
         
         if (waterMarkImage == nil) {
             callback(@[@"添加水印失败.", @""]);
@@ -276,6 +227,17 @@ RCT_EXPORT_METHOD(addImageWatermark:(NSString *)path
             callback(@[@"Can't save the image. Check your compression format.", @""]);
             return;
         }
+//        //测试==保存图片到album_name 一遍查看水印位置
+//        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+//        [library saveImage:waterMarkImage toAlbum:@"album_name" completion:^(NSURL *assetURL, NSError *error) {
+//            if (!error) {
+//                NSLog(@"保存图片成功!");
+//            } else {
+//                NSLog(@"保存图片错误!");
+//            }
+//        } failure:^(NSError *error) {
+//            NSLog(@"保存图片失败!");
+//        }];
         //NSLog(@"fullPath is :%@",fullPath);
         callback(@[[NSNull null], fullPath]);
     }];

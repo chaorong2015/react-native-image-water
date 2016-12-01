@@ -11,14 +11,13 @@ module.exports.ImageWatermark = {
         if (err) {
           return reject(err);
         }
-
         resolve(resizedPath);
       });
     });
   },
-  addImageWatermark: (path, str='', positionstr= 1, outputPath) => {
+  addImageWatermark: (path, watermarkText = '', watermarkPosition = 1, watermarkSize, outputPath) => {
     return new Promise((resolve, reject) => {
-      NativeModules.RNImageWatermark.addImageWatermark(path, str, positionstr, outputPath, (err, addWatermarkPath) => {
+      NativeModules.RNImageWatermark.addImageWatermark(path, watermarkText, watermarkPosition, watermarkSize, outputPath, (err, addWatermarkPath) => {
         if (err) {
           return reject(err);
         }
@@ -26,16 +25,16 @@ module.exports.ImageWatermark = {
       });
     });
   },
-	addPhotoAlbum: (path, str='') => {
-		return new Promise((resolve, reject) => {
-			NativeModules.RNImageWatermark.addPhotoAlbum(path, str, (err, msg) => {
-				if (err) {
-					return reject(err);
-				}
-				resolve(msg);
-			});
+  addPhotoAlbum: (path, albumName) => {
+    return new Promise((resolve, reject) => {
+	  NativeModules.RNImageWatermark.addPhotoAlbum(path, albumName, (err, msg) => {
+		if (err) {
+		  return reject(err);
+		}
+		resolve(msg);
 		});
-	},
+	});
+  },
   testPrint: () => {
   	console.log('RNImageWatermark=testPrint=', RNImageWatermark);
     return new Promise((resolve, reject) => {
