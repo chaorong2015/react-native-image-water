@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9BB160B41EA9F25000F999AF /* RNPrintPDF.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9BB160B31EA9F25000F999AF /* RNPrintPDF.h */; };
+		9BB160B61EA9F25000F999AF /* RNPrintPDF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB160B51EA9F25000F999AF /* RNPrintPDF.m */; };
+		9BB4A60C1EADADCE00737E6D /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4A6001EADADCE00737E6D /* NSData+MD5.m */; };
+		9BB4A60D1EADADCE00737E6D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4A6021EADADCE00737E6D /* NSString+MD5.m */; };
+		9BB4A60E1EADADCE00737E6D /* PDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4A6041EADADCE00737E6D /* PDFView.m */; };
+		9BB4A60F1EADADCE00737E6D /* UIImage+PDF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4A6061EADADCE00737E6D /* UIImage+PDF.m */; };
+		9BB4A6101EADADCE00737E6D /* UIView+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4A6081EADADCE00737E6D /* UIView+Image.m */; };
+		9BB4A61A1EADBC4400737E6D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB4A6191EADBC4400737E6D /* CoreBluetooth.framework */; };
+		9BB4A61C1EADBC5D00737E6D /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB4A61B1EADBC5D00737E6D /* ExternalAccessory.framework */; };
+		9BB4A6561EADDFB300737E6D /* PrinterFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4A6511EADDFB300737E6D /* PrinterFunctions.m */; };
+		9BB4A6571EADDFB300737E6D /* RasterDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4A6531EADDFB300737E6D /* RasterDocument.m */; };
+		9BB4A6581EADDFB300737E6D /* StarBitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4A6551EADDFB300737E6D /* StarBitmap.m */; };
+		AF1812831EAF846100CFBEED /* StarIO_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1812821EAF846100CFBEED /* StarIO_Extension.framework */; };
+		AF1812851EAF846E00CFBEED /* SMCloudServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1812841EAF846E00CFBEED /* SMCloudServices.framework */; };
+		AF1813151EB08F0500CFBEED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1813141EB08F0500CFBEED /* Foundation.framework */; };
+		AF1813171EB08F1A00CFBEED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1813161EB08F1A00CFBEED /* QuartzCore.framework */; };
+		AF18136C1EB0A19800CFBEED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF18136B1EB0A19800CFBEED /* UIKit.framework */; };
+		AFED7BA51EB1EF1200C2093D /* SMCloudServicesResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFED7BA41EB1EF1200C2093D /* SMCloudServicesResources.bundle */; };
+		AFED7BAE1EB1FCF800C2093D /* StarIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFED7BAD1EB1FCF800C2093D /* StarIO.framework */; };
+		AFED7BB21EB2055400C2093D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFED7BA71EB1F11400C2093D /* Info.plist */; };
+		AFED7BB61EB24F2000C2093D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFED7BB51EB24F2000C2093D /* CoreGraphics.framework */; };
+		AFED7BB81EB24F3900C2093D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFED7BB71EB24F3900C2093D /* CoreImage.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9BB160AE1EA9F25000F999AF /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				9BB160B41EA9F25000F999AF /* RNPrintPDF.h in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9BB160B01EA9F25000F999AF /* libRNPrintPDF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPrintPDF.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BB160B31EA9F25000F999AF /* RNPrintPDF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPrintPDF.h; sourceTree = "<group>"; };
+		9BB160B51EA9F25000F999AF /* RNPrintPDF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPrintPDF.m; sourceTree = "<group>"; };
+		9BB4A5FF1EADADCE00737E6D /* NSData+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MD5.h"; sourceTree = "<group>"; };
+		9BB4A6001EADADCE00737E6D /* NSData+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MD5.m"; sourceTree = "<group>"; };
+		9BB4A6011EADADCE00737E6D /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		9BB4A6021EADADCE00737E6D /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		9BB4A6031EADADCE00737E6D /* PDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFView.h; sourceTree = "<group>"; };
+		9BB4A6041EADADCE00737E6D /* PDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFView.m; sourceTree = "<group>"; };
+		9BB4A6051EADADCE00737E6D /* UIImage+PDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PDF.h"; sourceTree = "<group>"; };
+		9BB4A6061EADADCE00737E6D /* UIImage+PDF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PDF.m"; sourceTree = "<group>"; };
+		9BB4A6071EADADCE00737E6D /* UIView+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Image.h"; sourceTree = "<group>"; };
+		9BB4A6081EADADCE00737E6D /* UIView+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Image.m"; sourceTree = "<group>"; };
+		9BB4A6191EADBC4400737E6D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		9BB4A61B1EADBC5D00737E6D /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		9BB4A64F1EADDFB300737E6D /* CommonEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonEnum.h; sourceTree = "<group>"; };
+		9BB4A6501EADDFB300737E6D /* PrinterFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrinterFunctions.h; sourceTree = "<group>"; };
+		9BB4A6511EADDFB300737E6D /* PrinterFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrinterFunctions.m; sourceTree = "<group>"; };
+		9BB4A6521EADDFB300737E6D /* RasterDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RasterDocument.h; sourceTree = "<group>"; };
+		9BB4A6531EADDFB300737E6D /* RasterDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RasterDocument.m; sourceTree = "<group>"; };
+		9BB4A6541EADDFB300737E6D /* StarBitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarBitmap.h; sourceTree = "<group>"; };
+		9BB4A6551EADDFB300737E6D /* StarBitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarBitmap.m; sourceTree = "<group>"; };
+		AF1812821EAF846100CFBEED /* StarIO_Extension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO_Extension.framework; sourceTree = "<group>"; };
+		AF1812841EAF846E00CFBEED /* SMCloudServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMCloudServices.framework; sourceTree = "<group>"; };
+		AF1813141EB08F0500CFBEED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF1813161EB08F1A00CFBEED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AF18136B1EB0A19800CFBEED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AFED7BA41EB1EF1200C2093D /* SMCloudServicesResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SMCloudServicesResources.bundle; sourceTree = "<group>"; };
+		AFED7BA71EB1F11400C2093D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFED7BAD1EB1FCF800C2093D /* StarIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO.framework; sourceTree = "<group>"; };
+		AFED7BB51EB24F2000C2093D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AFED7BB71EB24F3900C2093D /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BB160AD1EA9F25000F999AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFED7BB81EB24F3900C2093D /* CoreImage.framework in Frameworks */,
+				AFED7BB61EB24F2000C2093D /* CoreGraphics.framework in Frameworks */,
+				AF18136C1EB0A19800CFBEED /* UIKit.framework in Frameworks */,
+				AF1813171EB08F1A00CFBEED /* QuartzCore.framework in Frameworks */,
+				AF1813151EB08F0500CFBEED /* Foundation.framework in Frameworks */,
+				AF1812831EAF846100CFBEED /* StarIO_Extension.framework in Frameworks */,
+				9BB4A61C1EADBC5D00737E6D /* ExternalAccessory.framework in Frameworks */,
+				AF1812851EAF846E00CFBEED /* SMCloudServices.framework in Frameworks */,
+				AFED7BAE1EB1FCF800C2093D /* StarIO.framework in Frameworks */,
+				9BB4A61A1EADBC4400737E6D /* CoreBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9BB160A71EA9F25000F999AF = {
+			isa = PBXGroup;
+			children = (
+				AFED7BA41EB1EF1200C2093D /* SMCloudServicesResources.bundle */,
+				9BB4A64E1EADDFB300737E6D /* PrinterFunctions */,
+				9BB4A5FE1EADADCE00737E6D /* UIImage+PDF */,
+				9BB160B21EA9F25000F999AF /* RNPrintPDF */,
+				9BB160B11EA9F25000F999AF /* Products */,
+				9BB4A5E91EADAD4500737E6D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9BB160B11EA9F25000F999AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BB160B01EA9F25000F999AF /* libRNPrintPDF.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BB160B21EA9F25000F999AF /* RNPrintPDF */ = {
+			isa = PBXGroup;
+			children = (
+				AFED7BB11EB2053B00C2093D /* Supporting Files */,
+				9BB160B31EA9F25000F999AF /* RNPrintPDF.h */,
+				9BB160B51EA9F25000F999AF /* RNPrintPDF.m */,
+			);
+			path = RNPrintPDF;
+			sourceTree = "<group>";
+		};
+		9BB4A5E91EADAD4500737E6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFED7BB71EB24F3900C2093D /* CoreImage.framework */,
+				AFED7BB51EB24F2000C2093D /* CoreGraphics.framework */,
+				AFED7BAD1EB1FCF800C2093D /* StarIO.framework */,
+				AF18136B1EB0A19800CFBEED /* UIKit.framework */,
+				AF1813161EB08F1A00CFBEED /* QuartzCore.framework */,
+				AF1813141EB08F0500CFBEED /* Foundation.framework */,
+				AF1812841EAF846E00CFBEED /* SMCloudServices.framework */,
+				AF1812821EAF846100CFBEED /* StarIO_Extension.framework */,
+				9BB4A61B1EADBC5D00737E6D /* ExternalAccessory.framework */,
+				9BB4A6191EADBC4400737E6D /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BB4A5FE1EADADCE00737E6D /* UIImage+PDF */ = {
+			isa = PBXGroup;
+			children = (
+				9BB4A5FF1EADADCE00737E6D /* NSData+MD5.h */,
+				9BB4A6001EADADCE00737E6D /* NSData+MD5.m */,
+				9BB4A6011EADADCE00737E6D /* NSString+MD5.h */,
+				9BB4A6021EADADCE00737E6D /* NSString+MD5.m */,
+				9BB4A6031EADADCE00737E6D /* PDFView.h */,
+				9BB4A6041EADADCE00737E6D /* PDFView.m */,
+				9BB4A6051EADADCE00737E6D /* UIImage+PDF.h */,
+				9BB4A6061EADADCE00737E6D /* UIImage+PDF.m */,
+				9BB4A6071EADADCE00737E6D /* UIView+Image.h */,
+				9BB4A6081EADADCE00737E6D /* UIView+Image.m */,
+			);
+			path = "UIImage+PDF";
+			sourceTree = "<group>";
+		};
+		9BB4A64E1EADDFB300737E6D /* PrinterFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				9BB4A64F1EADDFB300737E6D /* CommonEnum.h */,
+				9BB4A6501EADDFB300737E6D /* PrinterFunctions.h */,
+				9BB4A6511EADDFB300737E6D /* PrinterFunctions.m */,
+				9BB4A6521EADDFB300737E6D /* RasterDocument.h */,
+				9BB4A6531EADDFB300737E6D /* RasterDocument.m */,
+				9BB4A6541EADDFB300737E6D /* StarBitmap.h */,
+				9BB4A6551EADDFB300737E6D /* StarBitmap.m */,
+			);
+			path = PrinterFunctions;
+			sourceTree = "<group>";
+		};
+		AFED7BB11EB2053B00C2093D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFED7BA71EB1F11400C2093D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BB160AF1EA9F25000F999AF /* RNPrintPDF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BB160B91EA9F25000F999AF /* Build configuration list for PBXNativeTarget "RNPrintPDF" */;
+			buildPhases = (
+				9BB160AC1EA9F25000F999AF /* Sources */,
+				9BB160AD1EA9F25000F999AF /* Frameworks */,
+				9BB160AE1EA9F25000F999AF /* Copy Files */,
+				9BB4A6481EADD7A500737E6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNPrintPDF;
+			productName = RNPrintPDF;
+			productReference = 9BB160B01EA9F25000F999AF /* libRNPrintPDF.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BB160A81EA9F25000F999AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = maichong;
+				TargetAttributes = {
+					9BB160AF1EA9F25000F999AF = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 9BB160AB1EA9F25000F999AF /* Build configuration list for PBXProject "RNPrintPDF" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9BB160A71EA9F25000F999AF;
+			productRefGroup = 9BB160B11EA9F25000F999AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BB160AF1EA9F25000F999AF /* RNPrintPDF */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BB4A6481EADD7A500737E6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFED7BB21EB2055400C2093D /* Info.plist in Resources */,
+				AFED7BA51EB1EF1200C2093D /* SMCloudServicesResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BB160AC1EA9F25000F999AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BB4A60D1EADADCE00737E6D /* NSString+MD5.m in Sources */,
+				9BB4A6101EADADCE00737E6D /* UIView+Image.m in Sources */,
+				9BB4A6581EADDFB300737E6D /* StarBitmap.m in Sources */,
+				9BB160B61EA9F25000F999AF /* RNPrintPDF.m in Sources */,
+				9BB4A6571EADDFB300737E6D /* RasterDocument.m in Sources */,
+				9BB4A60E1EADADCE00737E6D /* PDFView.m in Sources */,
+				9BB4A60F1EADADCE00737E6D /* UIImage+PDF.m in Sources */,
+				9BB4A60C1EADADCE00737E6D /* NSData+MD5.m in Sources */,
+				9BB4A6561EADDFB300737E6D /* PrinterFunctions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9BB160B71EA9F25000F999AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9BB160B81EA9F25000F999AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BB160BA1EA9F25000F999AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../node_modules/react-native/React/**";
+				INFOPLIST_FILE = RNPrintPDF/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = debugging;
+			};
+			name = Debug;
+		};
+		9BB160BB1EA9F25000F999AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../node_modules/react-native/React/**";
+				INFOPLIST_FILE = RNPrintPDF/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-all_load";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = debugging;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BB160AB1EA9F25000F999AF /* Build configuration list for PBXProject "RNPrintPDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BB160B71EA9F25000F999AF /* Debug */,
+				9BB160B81EA9F25000F999AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BB160B91EA9F25000F999AF /* Build configuration list for PBXNativeTarget "RNPrintPDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BB160BA1EA9F25000F999AF /* Debug */,
+				9BB160BB1EA9F25000F999AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BB160A81EA9F25000F999AF /* Project object */;
+}
